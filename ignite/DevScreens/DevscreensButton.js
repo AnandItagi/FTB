@@ -21,13 +21,8 @@ export default class DevscreensButton extends React.Component {
       return (
         <View>
           <RoundedButton onPress={this.toggleModal}>
-            Open DevScreens
+            Login
           </RoundedButton>
-          <Modal
-            visible={this.state.showModal}
-            onRequestClose={this.toggleModal}>
-            <PresentationScreen screenProps={{ toggle: this.toggleModal }} />
-          </Modal>
         </View>
       )
     } else {

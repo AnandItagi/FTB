@@ -1,7 +1,7 @@
 package com.pizzaapp;
 
 import android.app.Application;
-
+import cl.json.RNSharePackage;
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
@@ -9,7 +9,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-
+import com.tkporter.sendsms.SendSMSPackage;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,7 +27,10 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new VectorIconsPackage(),
-            new RNDeviceInfo()
+            new RNDeviceInfo(),
+            new RNSharePackage(),
+            SendSMSPackage.getInstance(),
+            new RCTCameraPackage()
       );
     }
   };
